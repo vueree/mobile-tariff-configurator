@@ -61,10 +61,10 @@ nvm use 20
 
 ```bash
 # Клонирование репозитория
-git clone https://github.com/your-username/tariff-configurator.git
+git clone https://github.com/your-username/mobile-tariff-configurator.git
 
 # Переход в директорию проекта
-cd tariff-configurator
+cd mobile-tariff-configurator
 
 # Активация corepack для управления менеджерами пакетов
 corepack enable
