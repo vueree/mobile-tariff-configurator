@@ -1,0 +1,14 @@
+@import 'typography.css';
+@import 'atomic-classes.css';
+@import 'variables.css';
+
+body {
+  background-color: var(--background);
+  color: var(--black);
+}
+
+#app {
+  width: 1200px;
+  padding: 120px;
+  margin: 0 auto;
+}

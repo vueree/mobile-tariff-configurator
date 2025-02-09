@@ -1,0 +1,70 @@
+:root {
+  --font-family: 'Inter', sans-serif;
+  --letter-spacing--3: -3%;
+  --letter-spacing--1: -1%;
+  --letter-spacing--0: 0%;
+  --leading-trim-default: cap-height;
+}
+
+.title-l {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 64px;
+  letter-spacing: var(--letter-spacing-default);
+  leading-trim: var(--leading-trim-default);
+}
+
+.title-m {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 24px;
+  letter-spacing: var(--letter-spacing-default);
+  leading-trim: var(--leading-trim-default);
+}
+
+.text-l {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 32px;
+  letter-spacing: var(--letter-spacing-default);
+  leading-trim: var(--leading-trim-default);
+}
+
+.text-m {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 24px;
+  letter-spacing: var(--letter-spacing-default);
+  leading-trim: var(--leading-trim-default);
+}
+
+.text-m-v2 {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 24px;
+  letter-spacing: var(--letter-spacing-default);
+  leading-trim: var(--leading-trim-default);
+}
+
+.text-s {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 24px;
+  letter-spacing: var(--letter-spacing--0);
+  leading-trim: var(--leading-trim-default);
+}
+
+.text-xs {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: var(--letter-spacing--0);
+  leading-trim: var(--leading-trim-default);
+}
