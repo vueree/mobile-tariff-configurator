@@ -92,7 +92,7 @@ const onSubmit = () => {
     />
 
     <CheckboxInput :modelValue="store.state.hasRouter" @update:modelValue="store.updateRouter">
-      <span class="text-s"> Аренда <b>100</b> ₽/мес. </span>
+      <span class="text-s"> Аренда <b>99</b> ₽/мес. </span>
     </CheckboxInput>
 
     <SubmitButton :totalPrice="totalPrice" />

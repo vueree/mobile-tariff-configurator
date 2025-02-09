@@ -3,7 +3,6 @@ import { ref, computed } from 'vue'
 import type { TariffState } from '../types'
 
 export const useTariffStore = defineStore('tariff', () => {
-  // Начальное состояние
   const state = ref<TariffState>({
     minutes: 300,
     sms: 50,
@@ -12,7 +11,6 @@ export const useTariffStore = defineStore('tariff', () => {
     phoneNumber: '',
   })
 
-  // Константы для расчета цен
   const PRICES = {
     minutes: [
       { value: 100, price: 200 },
@@ -32,7 +30,7 @@ export const useTariffStore = defineStore('tariff', () => {
       { value: 15, price: 700 },
       { value: 25, price: 1000 },
     ],
-    router: 100,
+    router: 99,
   }
 
   const totalPrice = computed(() => {
@@ -66,10 +64,8 @@ export const useTariffStore = defineStore('tariff', () => {
 
   async function fetchInitialData() {
     try {
-      // Имитация задержки сети
       await new Promise((resolve) => setTimeout(resolve, 500))
 
-      // Имитация получения данных с сервера
       const response = {
         minutes: 300,
         sms: 50,
@@ -78,7 +74,6 @@ export const useTariffStore = defineStore('tariff', () => {
         phoneNumber: '',
       }
 
-      // Обновление state полученными данными
       state.value = response
 
       return state.value
