@@ -1,6 +1,5 @@
 import type { ValidationResult, PhoneValidationOptions } from '@/types'
 
-// Константы для валидации
 export const PHONE_PATTERNS = {
   BASIC: /^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$/,
   DIGITS_ONLY: /\d/g,
@@ -14,7 +13,6 @@ export const VALIDATION_MESSAGES = {
   },
 }
 
-// Класс для валидации телефона
 export class PhoneValidator {
   private pattern: RegExp
   private required: boolean
@@ -25,12 +23,10 @@ export class PhoneValidator {
   }
 
   validate(value: string): ValidationResult {
-    // Если поле не обязательное и пустое - считаем валидным
     if (!this.required && !value) {
       return { isValid: true }
     }
 
-    // Если поле обязательное и пустое - ошибка
     if (this.required && !value) {
       return {
         isValid: false,
@@ -38,7 +34,6 @@ export class PhoneValidator {
       }
     }
 
-    // Проверка на соответствие паттерну
     const isValid = this.pattern.test(value)
     return {
       isValid,
@@ -46,7 +41,6 @@ export class PhoneValidator {
     }
   }
 
-  // Форматирование телефонного номера
   formatPhone(value: string): string {
     let cleaned = value.replace(PHONE_PATTERNS.CLEAN_PHONE, '')
 
@@ -66,7 +60,6 @@ export class PhoneValidator {
   }
 }
 
-// Фабрика для создания валидатора
 export const createPhoneValidator = (options?: PhoneValidationOptions) => {
   return new PhoneValidator(options)
 }

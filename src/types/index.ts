@@ -11,7 +11,6 @@ export interface SliderPoint {
   price: number
 }
 
-// Типы для валидации
 export interface ValidationResult {
   isValid: boolean
   error?: string
